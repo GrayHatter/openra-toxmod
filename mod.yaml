@@ -1,0 +1,210 @@
+Metadata:
+	Title: Tox mod
+	Description: In a world where Skype exists but never should have, something something something, wold domination
+	Version: 0.0.0
+	Author: Tox users
+
+Folders:
+	.
+	./mods/tox
+	./mods/tox/bits
+	./mods/tox/bits/desert
+	./mods/tox/uibits
+	~^Content/ra
+
+MapFolders:
+	./mods/tox/maps: System
+	~^maps/ra: User
+	~^maps/tox: User
+
+Packages:
+	~main.mix
+	redalert.mix
+	conquer.mix
+	hires.mix
+	local.mix
+	sounds.mix
+	speech.mix
+	allies.mix
+	russian.mix
+	temperat.mix
+	snow.mix
+	interior.mix
+	~scores.mix
+	~movies1.mix
+	~movies2.mix
+
+Rules:
+	./mods/tox/rules/misc.yaml
+	./mods/tox/rules/ai.yaml
+	./mods/tox/rules/player.yaml
+	./mods/tox/rules/world.yaml
+	./mods/tox/rules/defaults.yaml
+	./mods/tox/rules/vehicles.yaml
+	./mods/tox/rules/husks.yaml
+	./mods/tox/rules/structures.yaml
+	./mods/tox/rules/infantry.yaml
+	./mods/tox/rules/civilian.yaml
+	./mods/tox/rules/decoration.yaml
+	./mods/tox/rules/aircraft.yaml
+	./mods/tox/rules/ships.yaml
+	./mods/tox/rules/fakes.yaml
+
+Sequences:
+	./mods/tox/sequences/ships.yaml
+	./mods/tox/sequences/vehicles.yaml
+	./mods/tox/sequences/structures.yaml
+	./mods/tox/sequences/infantry.yaml
+	./mods/tox/sequences/aircraft.yaml
+	./mods/tox/sequences/misc.yaml
+	./mods/tox/sequences/decorations.yaml
+
+TileSets:
+	./mods/tox/tilesets/snow.yaml
+	./mods/tox/tilesets/interior.yaml
+	./mods/tox/tilesets/temperat.yaml
+	./mods/tox/tilesets/desert.yaml
+
+Cursors:
+	./mods/tox/cursors.yaml
+
+Chrome:
+	./mods/tox/chrome.yaml
+
+Assemblies:
+	./mods/common/OpenRA.Mods.Common.dll
+	./mods/tox/OpenRA.Mods.RA.dll
+	./mods/cnc/OpenRA.Mods.Cnc.dll
+
+ChromeLayout:
+	./mods/tox/chrome/install.yaml
+	./mods/tox/chrome/ingame.yaml
+	./mods/tox/chrome/ingame-chat.yaml
+	./mods/tox/chrome/ingame-diplomacy.yaml
+	./mods/tox/chrome/ingame-fmvplayer.yaml
+	./mods/tox/chrome/ingame-info.yaml
+	./mods/tox/chrome/ingame-infoscripterror.yaml
+	./mods/tox/chrome/ingame-infobriefing.yaml
+	./mods/tox/chrome/ingame-infoobjectives.yaml
+	./mods/tox/chrome/ingame-infostats.yaml
+	./mods/tox/chrome/ingame-leavemap.yaml
+	./mods/tox/chrome/ingame-menu.yaml
+	./mods/tox/chrome/ingame-observer.yaml
+	./mods/tox/chrome/ingame-observerstats.yaml
+	./mods/tox/chrome/ingame-player.yaml
+	./mods/tox/chrome/ingame-debug.yaml
+	./mods/tox/chrome/mainmenu.yaml
+	./mods/tox/chrome/settings.yaml
+	./mods/tox/chrome/credits.yaml
+	./mods/tox/chrome/lobby.yaml
+	./mods/tox/chrome/lobby-mappreview.yaml
+	./mods/tox/chrome/lobby-playerbin.yaml
+	./mods/tox/chrome/lobby-dialogs.yaml
+	./mods/tox/chrome/color-picker.yaml
+	./mods/tox/chrome/map-chooser.yaml
+	./mods/tox/chrome/create-server.yaml
+	./mods/tox/chrome/serverbrowser.yaml
+	./mods/tox/chrome/connection.yaml
+	./mods/tox/chrome/directconnect.yaml
+	./mods/tox/chrome/replaybrowser.yaml
+	./mods/tox/chrome/dropdowns.yaml
+	./mods/tox/chrome/musicplayer.yaml
+	./mods/tox/chrome/tooltips.yaml
+	./mods/tox/chrome/assetbrowser.yaml
+	./mods/tox/chrome/missionbrowser.yaml
+	./mods/tox/chrome/confirmation-dialogs.yaml
+
+Weapons:
+	./mods/tox/weapons/explosions.yaml
+	./mods/tox/weapons/largecaliber.yaml
+	./mods/tox/weapons/missiles.yaml
+	./mods/tox/weapons/other.yaml
+	./mods/tox/weapons/smallcaliber.yaml
+	./mods/tox/weapons/superweapons.yaml
+
+Voices:
+	./mods/tox/audio/voices.yaml
+
+Notifications:
+	./mods/tox/audio/notifications.yaml
+
+Music:
+	./mods/tox/audio/music.yaml
+
+Translations:
+	./mods/tox/languages/english.yaml
+
+LoadScreen: LogoStripeLoadScreen
+	Image: ./mods/tox/uibits/loadscreen.png
+	Text: Filling Crates..., Charging Capacitors..., Reticulating Splines..., Planting Trees..., Building Bridges..., Aging Empires..., Compiling EVA..., Constructing Pylons..., Activating Skynet..., Splitting Atoms...
+
+ContentInstaller:
+	MenuWidget: INSTALL_PANEL
+	MusicMenuWidget: INSTALL_MUSIC_PANEL
+	TestFiles: allies.mix, conquer.mix, interior.mix, redalert.mix, russian.mix, snow.mix, sounds.mix, temperat.mix
+	PackageMirrorList: http://www.openra.net/packages/ra-mirrors.txt
+	DiskTestFiles: MAIN.MIX, INSTALL/REDALERT.MIX
+	PackageToExtractFromCD: MAIN.MIX
+	ExtractFilesFromCD: conquer.mix, russian.mix, allies.mix, sounds.mix, scores.mix, snow.mix, interior.mix, temperat.mix, general.mix
+	CopyFilesFromCD: INSTALL/REDALERT.MIX
+	ShippedSoundtracks: 2
+	MusicPackageMirrorList: http://www.openra.net/packages/ra-music-mirrors.txt
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+	LobbySettingsNotification
+	ColorValidator
+
+LobbyDefaults:
+	AllowCheats: false
+	Crates: true
+	StartingUnitsClass: none
+	FragileAlliances: false
+	Shroud: true
+	Fog: true
+	TechLevel: Unrestricted
+
+ChromeMetrics:
+	./mods/tox/metrics.yaml
+
+Fonts:
+	Regular:
+		Font:./mods/common/FreeSans.ttf
+		Size:14
+	Bold:
+		Font:./mods/common/FreeSansBold.ttf
+		Size:14
+	Title:
+		Font:./mods/tox/ZoodRangmah.ttf
+		Size:48
+	MediumBold:
+		Font:./mods/common/FreeSansBold.ttf
+		Size:18
+	BigBold:
+		Font:./mods/common/FreeSansBold.ttf
+		Size:24
+	Small:
+		Font:./mods/common/FreeSans.ttf
+		Size:12
+	Tiny:
+		Font:./mods/common/FreeSans.ttf
+		Size:10
+	TinyBold:
+		Font:./mods/common/FreeSansBold.ttf
+		Size:10
+
+Missions:
+	./mods/tox/missions.yaml
+
+SupportsMapsFrom: ra
+
+SpriteFormats: ShpTD, TmpRA, TmpTD, ShpTS
+
+SpriteSequenceFormat: TilesetSpecificSpriteSequence
+	TilesetExtensions:
+		TEMPERAT: .tem
+		SNOW: .sno
+		INTERIOR: .int
+		DESERT: .des
